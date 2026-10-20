@@ -31,6 +31,7 @@
 
   /* Размеры */
   --container-width: 1100px;
+  --header-height: 136px; /* высота sticky-шапки, нужна для отступа sticky-фильтра */
 }
 
 /* ===============================
@@ -97,6 +98,7 @@ a:focus-visible {
 .site-header {
   position: sticky;
   top: 0;
+  z-index: 100; /* шапка всегда поверх содержимого страницы */
   padding: var(--space-lg);
   background-color: var(--color-surface);
 }
@@ -160,9 +162,41 @@ a:focus-visible {
    =============================== */
 
 .breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
   max-width: var(--container-width);
   margin: 0 auto var(--space-md);
   font-size: 14px;
+  color: var(--color-muted);
+}
+
+/* Кнопка-стрелка «назад» слева от крошек */
+.breadcrumbs__back {
+  color: var(--color-primary);
+  font-size: 18px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.breadcrumbs__back:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Разделитель ставится перед каждым пунктом, кроме первого */
+.breadcrumbs__item + .breadcrumbs__item::before {
+  content: "/";
+  margin: 0 var(--space-xs);
   color: var(--color-muted);
 }
 
@@ -170,9 +204,8 @@ a:focus-visible {
   color: var(--color-primary);
 }
 
-.breadcrumbs__current::before {
-  content: " / ";
-  color: var(--color-muted);
+.breadcrumbs__current {
+  color: var(--color-text);
 }
 
 /* ===============================
@@ -222,6 +255,36 @@ a:focus-visible {
 .button--disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+.scroll-top {
+  position: fixed;
+  right: var(--space-lg);
+  bottom: var(--space-lg);
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  box-shadow: var(--shadow-md);
+  font-size: 22px;
+  text-decoration: none;
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+.scroll-top:hover {
+  color: var(--color-white);
+  background-color: var(--color-primary-dark);
+  transform: translateY(-3px);
+}
+
+.scroll-top:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
 }
 
 /* ===============================
@@ -325,6 +388,11 @@ a:focus-visible {
 
 .catalog-filters {
   grid-area: filters;
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-md));
+  align-self: start;
+  max-height: calc(100vh - var(--header-height) - var(--space-xl));
+  overflow-y: auto;
   padding: var(--space-md);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
@@ -477,4 +545,80 @@ a:focus-visible {
 .site-footer {
   padding: var(--space-lg);
   background-color: var(--color-surface);
+}
+
+/* ===============================
+   13. Карточка товара
+   =============================== */
+
+.product-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-xl);
+}
+
+.product-details__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+}
+
+.product-details__thumbs {
+  display: flex;
+  gap: var(--space-sm);
+  margin: var(--space-sm) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product-details__thumb {
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.product-details__thumb:hover { border-color: var(--color-primary); }
+
+.product-details__category { margin: 0; color: var(--color-muted); }
+.product-details__title { margin: var(--space-sm) 0; }
+
+.product-details__price {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.product-details__old-price {
+  margin-left: var(--space-sm);
+  font-size: 18px;
+  color: var(--color-muted);
+}
+
+.product-details__stock--available { color: var(--color-success); }
+.product-details__stock--out { color: var(--color-danger); }
+
+.product-details__actions {
+  display: flex;
+  gap: var(--space-md);
+}
+
+/* Таблица */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-table__caption {
+  margin-bottom: var(--space-sm);
+  font-weight: 700;
+  text-align: left;
+}
+
+.product-table__head,
+.product-table__cell {
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-border);
+  text-align: left;
 }
