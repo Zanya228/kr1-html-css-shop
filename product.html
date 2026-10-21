@@ -10,6 +10,8 @@
   <meta property="og:image" content="https://username.github.io/kr1-html-css-shop/images/preview.jpg">
   <title>Каталог товаров — Учебный интернет-магазин</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/product.js" defer></script>
 </head>
 
 <body>
@@ -36,56 +38,68 @@
             <ol class="breadcrumbs__list">
                 <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
                 <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Каталог</a></li>
-                <li class="breadcrumbs__item"><span class="breadcrumbs__current" aria-current="page">Товар 1</span></li>
+                <li class="breadcrumbs__item"><span class="breadcrumbs__current" aria-current="page">Консоль Sony PlayStation 5</span></li>
             </ol>
         </nav>
 
         <article class="product-details">
             <div class="product-details__gallery">
             <img class="product-details__image" src="images/product-1.webp"
-                alt="Товар 1 — вид спереди" width="600" height="600">
+                alt="Консоль Sony PlayStation 5 Slim 825GB" width="600" height="800">
             </div>
 
             <div class="product-details__info">
-            <h1 class="product-details__title">Товар 1</h1>
+            <h1 class="product-details__title">Консоль Sony PlayStation 5 Slim 825GB</h1>
             <p class="product-details__rating">Оценка: 5.0★ (5 отзывов)</p>
 
-            <p class="product-details__price">1000 руб.</p>
+            <p class="product-details__price">84999 руб.</p>
 
             <p class="product-details__stock product-details__stock--available">В наличии</p>
 
             <div class="product-details__actions">
-                <button class="button button--primary product-card__button" type="button" data-product="Товар 3">Заказать</button>
+                <button class="button button--primary product-card__button" type="button" data-product="Консоль Sony PlayStation 5 Slim 825GB">Заказать</button>
             </div>
             </div>
         </article>
 
         <section class="section">
             <h2 class="section__title">Описание</h2>
-            <p class="section__text">Подробное описание товара…</p>
+            <p class="section__text" id="product-description">PlayStation 5 Slim Digital Edition — это обновлённая версия популярной консоли, которая стала легче предшественницы на 100 граммов благодаря уменьшенным компонентам и новому матовому покрытию. Модель оснащена сверхбыстрым SSD на 825 ГБ (пользователю доступно около 667 ГБ, остальное занимает система). Консоль поддерживает игры в разрешении до 8K Ultra HD, технологии HDR и тактильную отдачу контроллера DualSense, а скорость чтения SSD достигает 5500 МБ/с, что обеспечивает мгновенную загрузку. Важно отметить: это цифровая версия без дисковода, поэтому игры приобретаются и загружаются через PlayStation Store. Наличие портов включает USB Type-A 3.0, HDMI и Gigabit Ethernet.</p>
         </section>
 
         <section class="section">
-            <table class="product-table">
             <h2 class="section__title">Характеристики</h2>
+            <table class="product-table">
             <thead>
                 <tr>
                 <th class="product-table__head" scope="col">Параметр</th>
                 <th class="product-table__head" scope="col">Значение</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="product-specs">
                 <tr class="product-table__row">
                 <td class="product-table__cell">Категория</td>
                 <td class="product-table__cell">Развлечения</td>
                 </tr>
                 <tr class="product-table__row">
-                <td class="product-table__cell">-</td>
-                <td class="product-table__cell">-</td>
+                <td class="product-table__cell">Встроенный Wi-Fi модуль</td>
+                <td class="product-table__cell">Есть</td>
                 </tr>
                 <tr class="product-table__row">
-                <td class="product-table__cell">-</td>
-                <td class="product-table__cell">-</td>
+                <td class="product-table__cell">Выход HDMI</td>
+                <td class="product-table__cell">1 шт.</td>
+                </tr>
+                <tr class="product-table__row">
+                <td class="product-table__cell">Объём SSD</td>
+                <td class="product-table__cell">825 ГБ</td>
+                </tr>
+                <tr class="product-table__row">
+                <td class="product-table__cell">Материал корпуса</td>
+                <td class="product-table__cell">Пластик</td>
+                </tr>
+                <tr class="product-table__row">
+                <td class="product-table__cell">Вес</td>
+                <td class="product-table__cell">3.2 кг</td>
                 </tr>
             </tbody>
             </table>

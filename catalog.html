@@ -10,6 +10,7 @@
   <meta property="og:image" content="https://username.github.io/kr1-html-css-shop/images/preview.jpg">
   <title>Каталог товаров — Учебный интернет-магазин</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -80,88 +81,41 @@
 
         <div class="products-grid">
           <article class="product-card">
-            <h3 class="product-card__title">Товар 1</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 1000 руб.</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+            <img class="product-card__image" src="images/product-1.webp" alt="Консоль Sony PlayStation 5 Slim 825GB" width="600" height="800" loading="lazy">
+            <h3 class="product-card__title">Консоль Sony PlayStation 5 Slim 825GB</h3>
+            <p class="product-card__description">Компактная игровая консоль с SSD 825 ГБ, поддержкой 4K/8K, HDR и контроллером DualSense.</p>
+            <p class="product-card__price">Цена: 84999 руб.</p>
+
+            <div class="product-card__actions">
+              <button class="button button--primary product-card__button" type="button" data-product="Консоль Sony PlayStation 5 Slim 825GB">Заказать</button>
+              <a class="button button--secondary" href="product.html?id=ps5">Подробнее</a>
+            </div>
           </article>
 
           <article class="product-card">
-            <h3 class="product-card__title">Товар 2</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 1500 руб.</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+            <img class="product-card__image" src="images/product-2.webp" alt="Ноутбук Redmi Book 14 2024 i5-13420H/16GB+1TB" width="620" height="620" loading="lazy">
+            <h3 class="product-card__title">Ноутбук Redmi Book 14 2024 i5-13420H/16GB+1TB</h3>
+            <p class="product-card__description">16″ QHD 120 Гц, AMD Ryzen 5 7640HS, 16 ГБ RAM, SSD 1 ТБ, металлический корпус, без ОС.</p>
+            <p class="product-card__price">Цена: 75999 руб.</p>
+
+            <div class="product-card__actions">
+              <button class="button button--primary product-card__button" type="button" data-product="Ноутбук Redmi Book 14 2024 i5-13420H/16GB+1TB">Заказать</button>
+              <a class="button button--secondary" href="product.html?id=laptop">Подробнее</a>
+            </div>
           </article>
 
           <article class="product-card">
-            <h3 class="product-card__title">Товар 3</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 2000 руб.</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+            <img class="product-card__image" src="images/product-3.jpg" alt="Наушники беспроводные Apple AirPods Pro 3" width="870" height="870" loading="lazy">
+            <h3 class="product-card__title">Наушники беспроводные Apple AirPods Pro 3</h3>
+            <p class="product-card__description">TWS-наушники с улучшенным ANC, датчиком пульса, защитой IP57 и автономностью до 8 часов.</p>
+            <p class="product-card__price">Цена: 34990 руб.</p>
+
+            <div class="product-card__actions">
+              <button class="button button--primary product-card__button" type="button" data-product="Наушники беспроводные Apple AirPods Pro 3">Заказать</button>
+              <a class="button button--secondary" href="product.html?id=airpods">Подробнее</a>
+            </div>
           </article>
 
-          <article class="product-card">
-            <h3 class="product-card__title">Товар 4</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 1000 руб.</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
-
-          <article class="product-card">
-            <h3 class="product-card__title">Товар 5</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 1000 руб.</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
-
-          <article class="product-card">
-            <h3 class="product-card__title">Товар 6</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 1000 руб.</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
-
-          <article class="product-card">
-            <h3 class="product-card__title">Товар 7</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 1000 руб.</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
-
-          <article class="product-card">
-            <h3 class="product-card__title">Товар 8</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 1000 руб.</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
-
-          <article class="product-card">
-            <h3 class="product-card__title">Товар 9</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 1000 руб.</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
-
-          <article class="product-card">
-            <h3 class="product-card__title">Товар 10</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 1000 руб.</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
-
-          <article class="product-card">
-            <h3 class="product-card__title">Товар 11</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 1000 руб.</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
-
-          <article class="product-card">
-            <h3 class="product-card__title">Товар 12</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 1000 руб.</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
         </div>
       </section>
     </section>
@@ -171,6 +125,109 @@
     <p class="site-footer__text">&copy; 2026 Учебный проект. Все права защищены.</p>
     <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
   </footer>
+
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+    <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
+
+    <form class="order-form" id="order-form" action="#" method="post" novalidate>
+      <input id="selected-product" name="selected-product" type="hidden">
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-name">Имя</label>
+        <input
+          class="order-form__input"
+          id="order-name"
+          name="name"
+          type="text"
+          placeholder="Введите ваше имя"
+          minlength="2"
+          autocomplete="given-name"
+          required
+        >
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-email">E-mail</label>
+        <input
+          class="order-form__input"
+          id="order-email"
+          name="email"
+          type="email"
+          placeholder="example@mail.ru"
+          autocomplete="email"
+          required
+        >
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-phone">Телефон</label>
+        <input
+          class="order-form__input"
+          id="order-phone"
+          name="phone"
+          type="tel"
+          inputmode="tel"
+          placeholder="+7 (900) 000-00-00"
+          pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+          required
+        >
+        <small class="order-form__hint">Формат: +7 (900) 000-00-00</small>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-date">Дата связи</label>
+        <input
+          class="order-form__input"
+          id="order-date"
+          name="date"
+          type="date"
+        >
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-topic">Тема заявки</label>
+        <select class="order-form__select" id="order-topic" name="topic" required>
+          <option value="">Выберите тему</option>
+          <option value="product">Заказ товара</option>
+          <option value="consultation">Консультация</option>
+          <option value="delivery">Доставка</option>
+        </select>
+      </div>
+
+      <div class="order-form__field">
+        <label class="order-form__label" for="order-comment">Комментарий</label>
+        <textarea
+          class="order-form__textarea"
+          id="order-comment"
+          name="comment"
+          rows="4"
+          placeholder="Укажите дополнительную информацию"
+        ></textarea>
+      </div>
+
+      <div class="order-form__field order-form__field--checkbox">
+        <label class="order-form__checkbox-label">
+          <input
+            class="order-form__checkbox"
+            id="order-agreement"
+            name="agreement"
+            type="checkbox"
+            required
+          >
+          Я согласен на обработку данных
+        </label>
+      </div>
+
+      <div class="order-form__actions">
+        <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
+        <button class="button button--primary" type="submit">Отправить заявку</button>
+      </div>
+    </form>
+  </dialog>
+
+  <p class="success-message" id="success-message" hidden>
+    Форма успешно отправлена!
+  </p>
 
   <a class="scroll-top" href="#top" aria-label="Наверх">↑</a>
 </body>
